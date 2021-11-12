@@ -15,18 +15,6 @@ public class ObusCreator : MonoBehaviour
         m_Mf.sharedMesh = GenerateCylinder(40, 10, 2, 6, (kx, kZ) => m_Obus.Evaluate(kZ));
     }
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     Mesh GenerateCylinder(int nSegmentsTheta, int nSegmentsY, float radius, float height, ComputeValueDelegate rhoFunc)
     {
         ComputeVertexPos cylFunc = (kX, kZ) => CoordConvert.CylindricalToCartesian(new Cylindrical(radius * rhoFunc(kX, kZ), kX * Mathf.PI * 2, height * kZ));
