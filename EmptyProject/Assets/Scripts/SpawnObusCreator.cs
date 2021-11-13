@@ -13,6 +13,7 @@ public class SpawnObusCreator : MonoBehaviour
     [SerializeField] float px = 3000f;
     [SerializeField] float py = 1f;
     [SerializeField] float pz = 50f;
+    [SerializeField] float score = 0f; //Score = Distance parcourus en X
 
     int count_spawn = 0;
 
@@ -47,5 +48,21 @@ public class SpawnObusCreator : MonoBehaviour
             Vector3 Position = new Vector3(randomX, randomY, randomZ);
             new_Obus.transform.localPosition = Position;
         }
+
+        if (m_player.transform.position.z < 0) {
+            m_player.transform.position= new Vector3(m_player.transform.position.x, m_player.transform.position.y, 0);
+         }
+        if (m_player.transform.position.z > 50) {
+            m_player.transform.position = new Vector3(m_player.transform.position.x, m_player.transform.position.y, 50);
+        }
+
+        if (m_player.transform.position.x < 0) {
+            m_player.transform.position = new Vector3(0, m_player.transform.position.y, m_player.transform.position.z);
+        }
+
+        if (m_player.transform.position.x > score) {
+            score = m_player.transform.position.x;
+        }
+
     }
 }
