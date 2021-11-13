@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class RespawnManager : MonoBehaviour
 {
+    SpawnObusCreator SpawnObusCreator;
+    private void Awake()
+    {
+        SpawnObusCreator = FindObjectOfType<SpawnObusCreator>();
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Obus"))
         {
             Debug.Log("Touché par " + collision.collider.tag);
-            this.transform.position = new Vector3(10, 3, 25);
-            this.transform.Rotate(new Vector3(0, 0, 0));
+            SpawnObusCreator.StartGame();
         }
     }
 }

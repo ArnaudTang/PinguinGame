@@ -216,7 +216,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &828424191
+--- !u!1001 &1740508099
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -228,34 +228,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spawner
       objectReference: {fileID: 0}
-    - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
-        type: 3}
-      propertyPath: px
-      value: 3000
-      objectReference: {fileID: 0}
-    - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
-        type: 3}
-      propertyPath: pz
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
-        type: 3}
-      propertyPath: obus
-      value: 
-      objectReference: {fileID: 5710106336099723851, guid: 30be5dde89eef004eb4c2f75a666563e,
-        type: 3}
-    - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 6907062060190305554, guid: f389bd78b752f0747aba91574dfba796,
-        type: 3}
-    - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
-        type: 3}
-      propertyPath: terrain
-      value: 
-      objectReference: {fileID: 2714209846271987702, guid: acfa3d19f124bec4d9dc14167aee5cc6,
-        type: 3}
     - target: {fileID: 5133826383065526654, guid: 561d10609d0a9b240b28a7ef681c515e,
         type: 3}
       propertyPath: m_RootOrder

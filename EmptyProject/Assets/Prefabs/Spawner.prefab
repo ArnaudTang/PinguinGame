@@ -45,3 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obus: {fileID: 5710106336099723851, guid: 30be5dde89eef004eb4c2f75a666563e, type: 3}
   terrain: {fileID: 2714209846271987702, guid: acfa3d19f124bec4d9dc14167aee5cc6, type: 3}
+  player: {fileID: 6907062060190305554, guid: f389bd78b752f0747aba91574dfba796, type: 3}
+  px: 3000
+  py: 1
+  pz: 50
+  score: 0

@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class SpawnObusCreator : MonoBehaviour
 {
+    GameObject bombContainer;
     GameObject m_plane;
     GameObject m_player;
+
+    ScoreSetter scoreSetter;
+
+    bool hasSpawned = false;
 
     [SerializeField] GameObject obus;
     [SerializeField] GameObject terrain;
@@ -13,7 +18,10 @@ public class SpawnObusCreator : MonoBehaviour
     [SerializeField] float px = 3000f;
     [SerializeField] float py = 1f;
     [SerializeField] float pz = 50f;
-    [SerializeField] float score = 0f; //Score = Distance parcourus en X
+
+
+    protected float score; //Score = Distance parcourus en X
+    protected float bestScore = 0f; //Score = Distance parcourus en X
 
     int count_spawn = 0;
 
@@ -25,9 +33,7 @@ public class SpawnObusCreator : MonoBehaviour
         m_plane.transform.position = new Vector3(px/2, 0, pz/2);
         m_plane.transform.SetParent(gameObject.transform);
 
-        m_player = Instantiate(player);
-        m_player.transform.Rotate(new Vector3(0, 90, 0));
-        m_player.transform.position = new Vector3(10, 3, pz/2);
+        StartGame();
     }
 
     // Update is called once per frame
@@ -36,17 +42,18 @@ public class SpawnObusCreator : MonoBehaviour
         count_spawn++;
 
         float pos_player = m_player.transform.position.x;
-
+         
         if (count_spawn == 1)
         {
             count_spawn = 0;
             GameObject new_Obus = Instantiate(obus);
             new_Obus.tag = "Obus";
-            float randomX = Random.Range(Mathf.Max(pos_player - 10, 15), pos_player + 500);
+            float randomX = Random.Range(Mathf.Max(pos_player - 10, 15), px);
             float randomY = Random.Range(80, 100);
-            float randomZ = Random.Range(5, pz - 5);
+            float randomZ = Random.Range(2, pz - 2);
             Vector3 Position = new Vector3(randomX, randomY, randomZ);
             new_Obus.transform.localPosition = Position;
+            new_Obus.transform.SetParent(bombContainer.transform);
         }
 
         if (m_player.transform.position.z < 0) {
@@ -62,7 +69,30 @@ public class SpawnObusCreator : MonoBehaviour
 
         if (m_player.transform.position.x > score) {
             score = m_player.transform.position.x;
+            if(score > bestScore) { bestScore = score; }
+            scoreSetter.setScore(score, bestScore);
         }
 
+
+
+    }
+
+    public void StartGame()
+    {
+        Debug.Log("Start game");
+
+        if(hasSpawned)
+        {
+            Destroy(m_player);
+            Destroy(bombContainer);
+        }
+
+        score = 0f;
+        hasSpawned = true;
+        bombContainer = new GameObject("BombContainer");
+        m_player = Instantiate(player);
+        m_player.transform.Rotate(new Vector3(0, 90, 0));
+        m_player.transform.position = new Vector3(10, 3, pz / 2);
+        scoreSetter = FindObjectOfType<ScoreSetter>();
     }
 }
