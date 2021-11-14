@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 4067de1a02072244798361060c5e7325, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.54439956, g: 0.5070023, b: 0.5242686, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -231,13 +231,58 @@ PrefabInstance:
     - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
         type: 3}
       propertyPath: px
-      value: 600
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
+        type: 3}
+      propertyPath: py
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
         type: 3}
       propertyPath: tree
       value: 
       objectReference: {fileID: 100000, guid: 30c6835c55f25574fb0de0175012fd4e, type: 3}
+    - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
+        type: 3}
+      propertyPath: toSpawn.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
+        type: 3}
+      propertyPath: toSpawn.Array.data[0]
+      value: 
+      objectReference: {fileID: 100000, guid: 30c6835c55f25574fb0de0175012fd4e, type: 3}
+    - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
+        type: 3}
+      propertyPath: toSpawn.Array.data[1]
+      value: 
+      objectReference: {fileID: 100000, guid: eafc3ed33a697a4479cb6159bf405fed, type: 3}
+    - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
+        type: 3}
+      propertyPath: toSpawn.Array.data[2]
+      value: 
+      objectReference: {fileID: 100000, guid: 600491ce39e51af4e88e958fad3f21d1, type: 3}
+    - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
+        type: 3}
+      propertyPath: toSpawn.Array.data[3]
+      value: 
+      objectReference: {fileID: 100000, guid: a158e0d71b9d28a449578a6a542211cb, type: 3}
+    - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
+        type: 3}
+      propertyPath: toSpawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 100000, guid: d0a555f42830f0b4ea42031195259d2a, type: 3}
+    - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
+        type: 3}
+      propertyPath: toSpawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 100000, guid: c309f1fdc1ba06e4a849cdd8749eacef, type: 3}
+    - target: {fileID: 5133826383065526653, guid: 561d10609d0a9b240b28a7ef681c515e,
+        type: 3}
+      propertyPath: toSpawn.Array.data[6]
+      value: 
+      objectReference: {fileID: 100000, guid: 5b8d1200b09c3384bafaef83c5cfc6df, type: 3}
     - target: {fileID: 5133826383065526654, guid: 561d10609d0a9b240b28a7ef681c515e,
         type: 3}
       propertyPath: m_RootOrder
