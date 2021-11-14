@@ -1,0 +1,34 @@
+Comment jouer au jeu ?
+Lorsque vous lancez le jeu, vous arriverez sur le menu.
+Il vous suffira d'appuyer sur "Play" et cela lancera le jeu.
+
+Le but du jeu est d'aller le plus loin possible sans toucher aux bombes qui tombent du ciel.
+
+Pour pouvoir bouger, vous pouvez utiliser les touches suivantes:
+"Z" pour avancer
+"S" pour reculer
+"Q" pour aller vers la gauche
+"D" pour aller vers la droite.
+
+
+Dans ce jeu, les bombes sont générés aléatoirement dans le ciel et en ce qui concerne sa forme, nous avons utiliser 
+
+
+Remarque (Amélioration, bug) 
+
+Lorsque le jeu est lancé, on peut apercevoir que le score est affiché alors qu'il ne devrait pas y être.
+
+
+Pour la répartition des tâches:
+
+Clément et Arnaud ont tous les deux contribuer pour la génération du monde ainsi que la génération aléatoire des bombes,
+Clément s'est occupé ensuite de l'avatar (les mouvements et les limites de déplacements) ainsi que la position de la caméra.
+Arnaud s'est occupé du menu ainsi que la mise en place des obstacles(les arbres) dans le monde.
+Et tous ce qui concerne le design tels que le ciel, la texture des bombes ainsi que le chemin, 
+nous avons utilisé des assets que vous retrouverez ci-dessous qui nous permettait de donner de la couleur aux objets.
+
+
+Asset utilisé:
+https://assetstore.unity.com/packages/2d/textures-materials/metals/yughues-free-metal-materials-12949 Free Unity
+https://assetstore.unity.com/packages/2d/textures-materials/sky/free-hdr-sky-61217 Free Unity
+https://assetstore.unity.com/packages/3d/vegetation/trees/lowpoly-forest-pack-21180 Free  Unity
