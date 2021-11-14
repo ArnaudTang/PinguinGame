@@ -43,10 +43,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4d3f49fd7157fd4fa8fea23c17902b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  toSpawn:
+  - {fileID: 100000, guid: 30c6835c55f25574fb0de0175012fd4e, type: 3}
+  - {fileID: 100000, guid: eafc3ed33a697a4479cb6159bf405fed, type: 3}
+  - {fileID: 100000, guid: 600491ce39e51af4e88e958fad3f21d1, type: 3}
+  - {fileID: 100000, guid: a158e0d71b9d28a449578a6a542211cb, type: 3}
+  - {fileID: 100000, guid: d0a555f42830f0b4ea42031195259d2a, type: 3}
+  - {fileID: 100000, guid: c309f1fdc1ba06e4a849cdd8749eacef, type: 3}
+  - {fileID: 100000, guid: 5b8d1200b09c3384bafaef83c5cfc6df, type: 3}
+  spawn_step: 3
   obus: {fileID: 5710106336099723851, guid: 30be5dde89eef004eb4c2f75a666563e, type: 3}
   terrain: {fileID: 2714209846271987702, guid: acfa3d19f124bec4d9dc14167aee5cc6, type: 3}
   player: {fileID: 6907062060190305554, guid: f389bd78b752f0747aba91574dfba796, type: 3}
   px: 3000
-  py: 1
+  py: 5
   pz: 50
-  score: 0
