@@ -11,6 +11,10 @@ public class SpawnObusCreator : MonoBehaviour
 
     ScoreSetter scoreSetter;
 
+    bool isFinished = false;
+
+    int stoppedTime = 0;
+
     bool hasSpawned = false;
 
     [SerializeField] GameObject[] toSpawn;
@@ -35,10 +39,7 @@ public class SpawnObusCreator : MonoBehaviour
         m_plane = Instantiate(terrain);
         terrain.transform.localScale = new Vector3(px, py, pz);
         terrain.transform.position = new Vector3(px / 2, 0, pz / 2);
-        m_plane.transform.SetParent(gameObject.transform);
-
-        Material mat = Resources.Load("Grass") as Material;
-        m_plane.GetComponent<MeshRenderer>().materials[0] = mat;        
+        m_plane.transform.SetParent(gameObject.transform);    
 
         StartGame();
     }
@@ -50,7 +51,7 @@ public class SpawnObusCreator : MonoBehaviour
 
         float pos_player = m_player.transform.position.x;
          
-        if (count_spawn == 1)
+        if (count_spawn == 1 && !isFinished)
         {
             count_spawn = 0;
             GameObject new_Obus = Instantiate(obus);
@@ -80,7 +81,17 @@ public class SpawnObusCreator : MonoBehaviour
             scoreSetter.setScore(score, bestScore);
         }
 
-
+        if(m_player.transform.position.x > px - 15 || isFinished)
+        {
+            scoreSetter.setText("Felications ! Vous avez survécu !");
+            Time.timeScale = 0;
+            isFinished = true;
+            stoppedTime += 1;
+            if(stoppedTime == 1000)
+            {
+                StartGame();
+            }
+        }
 
     }
 
@@ -88,7 +99,14 @@ public class SpawnObusCreator : MonoBehaviour
     {
         Debug.Log("Start game");
 
-        if(hasSpawned)
+        Time.timeScale = 1;
+
+        isFinished = false;
+
+        stoppedTime = 0;
+        count_spawn = 0;
+
+        if (hasSpawned)
         {
             Destroy(m_player);
             Destroy(bombContainer);
@@ -102,6 +120,8 @@ public class SpawnObusCreator : MonoBehaviour
         m_player.transform.Rotate(new Vector3(0, 90, 0));
         m_player.transform.position = new Vector3(10, 3, pz / 2);
         scoreSetter = FindObjectOfType<ScoreSetter>();
+
+        scoreSetter.setText("");
 
         float pos_y = 0f;
 
